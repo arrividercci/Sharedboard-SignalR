@@ -13,5 +13,10 @@ namespace Sharedboard_SignalR.Hubs
         {
             await Clients.All.SendAsync("Draw", message);   
         }
+        public async Task DrawStart()
+        {
+            await Clients.All.SendAsync("DrawStart");
+        }
+
     }
 }
